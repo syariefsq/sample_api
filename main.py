@@ -26,7 +26,7 @@ def getWelcome(): # function untuk menghandle endpoint diatas
 
 # endpoitn untuk menampilakn data set
 
-@app.get("/data")
+@app.get("/profile")
 def getData():
     # melakukan proses pengambilan data dari csv
     df = pd.read_csv("dataset.csv")
@@ -45,7 +45,7 @@ def getData():
 # data dari Rusia -> /data/russia
 # data dari Rusia -> /data/zimbabwe
 
-@app.get("/profile/{location}")
+@app.get("/data/{location}")
 def getData(location: str):
     # melakukan proses pengambilan data dari csv
     df = pd.read_csv("dataset.csv")
