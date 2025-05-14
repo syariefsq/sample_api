@@ -15,6 +15,8 @@ password = "kopiluwakgabikinkenyang123"
 # 2. harus ada fungsi yang mengembalikan response
 # function (get, post, put, delete)
 
+# ---------------------------------
+
 # endppoint pertama/root untuk menampilkan pesan 'selamat datang'
 @app.get("/")
 def getWelcome(): # function untuk menghandle endpoint diatas
@@ -43,7 +45,7 @@ def getData():
 # data dari Rusia -> /data/russia
 # data dari Rusia -> /data/zimbabwe
 
-@app.get("/data/{location}")
+@app.get("/profile/{location}")
 def getData(location: str):
     # melakukan proses pengambilan data dari csv
     df = pd.read_csv("dataset.csv")
